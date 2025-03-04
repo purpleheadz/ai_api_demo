@@ -1,11 +1,13 @@
-# OpenAI API デモアプリ
+# AI API デモアプリ
 
-Streamlitを使用したOpenAI APIのデモアプリケーションです。テキスト生成AIモデルに質問を送信し、回答を取得できます。
+Streamlitを使用したAI APIのデモアプリケーションです。OpenAIおよびOpenAI互換APIを使用して、テキスト生成AIモデルに質問を送信し、回答を取得できます。
 
 ## 機能
 
-- OpenAI APIを使用したAIとの対話
-- 複数のモデル選択（GPT-3.5 Turbo、GPT-4、GPT-4o）
+- OpenAI APIおよびOpenAI互換APIを使用したAIとの対話
+- カスタムAPI Base URLの設定
+- 複数のモデル選択（GPT、Claude、LLaMAなど）
+- カスタムモデル名の指定
 - Temperatureパラメータの調整
 - トークン使用量の表示
 
@@ -29,14 +31,27 @@ pip install streamlit openai
 streamlit run app.py
 ```
 
-2. ブラウザで表示されるアプリにOpenAI APIキーを入力する
-3. 使用するモデルを選択する
-4. 質問を入力して「送信」ボタンをクリックする
+2. ブラウザで表示されるアプリでAPI種類を選択する（OpenAIまたはOpenAI互換）
+3. APIキーを入力する
+4. OpenAI互換APIを選択した場合は、API Base URLも入力する
+5. 使用するモデルを選択する（またはカスタムモデル名を入力）
+6. 質問を入力して「送信」ボタンをクリックする
+
+## 対応API
+
+以下のようなOpenAI互換APIに対応しています：
+
+- [OpenAI API](https://platform.openai.com/)
+- [Anthropic Claude API](https://docs.anthropic.com/claude/reference/getting-started-with-the-api)
+- [Together AI](https://www.together.ai/)
+- [Groq](https://console.groq.com/)
+- その他のOpenAI互換API
 
 ## 注意事項
 
-- OpenAI APIキーは[OpenAIのウェブサイト](https://platform.openai.com/)で取得できます
+- 各サービスのAPIキーは各プロバイダーから取得してください
 - APIキーは公開しないように注意してください
+- 各APIプロバイダーの利用規約に従ってご利用ください
 
 ## ライセンス
 
